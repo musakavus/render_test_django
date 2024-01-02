@@ -7,14 +7,14 @@ from django.contrib import staticfiles
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # burası git işleminde açılacak
+FILE_CHARSET = 'utf-8'
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
-
-# ALLOWED_HOSTS = []
-# DEBUG = True
-# SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
+ALLOWED_HOSTS = []
+DEBUG = True
+SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -59,12 +59,8 @@ WSGI_APPLICATION = 'render_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'render_test_django',
-        'USER': 'render_test_django_user',
-        'PASSWORD': 'CrLCVsSJb7y08sTQSjOVwLxi5qkV6XAV',  # PostgreSQL şifrenizi buraya ekleyin
-        'HOST': 'dpg-ckvc703amefc73f5rvf0-a',  # PostgreSQL sunucu adresiniz
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
