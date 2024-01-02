@@ -58,7 +58,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'render_test.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL')),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'render_test_django',
+        'USER': 'render_test_django_user',
+        'PASSWORD': 'CrLCVsSJb7y08sTQSjOVwLxi5qkV6XAV',  # PostgreSQL şifrenizi buraya ekleyin
+        'HOST': 'dpg-ckvc703amefc73f5rvf0-a',  # PostgreSQL sunucu adresiniz
+        'PORT': '5432',
+    }
 }
 
 # database_url = os.environ.get('DATABASE_URL')
