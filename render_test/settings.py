@@ -8,13 +8,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # burası git işleminde açılacak
 
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
-ALLOWED_HOSTS = []
-DEBUG = True
-SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
+# ALLOWED_HOSTS = []
+# DEBUG = True
+# SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
