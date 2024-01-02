@@ -65,9 +65,7 @@ DATABASES = {
 }
 
 database_url = os.environ.get('DATABASE_URL')
-
 DATABASES["default"] = dj_database_url.parse(database_url)
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -98,7 +96,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/'),
 )
 
-# STATIC_ROOT = (BASE_DIR / 'staficfiles/')
+STATIC_ROOT = (BASE_DIR / 'staficfiles/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-

@@ -1173,8 +1173,9 @@ body .body-overlay {
     margin-bottom: 30px;
 }
 
-span a.visit-website{
-    color: red;
+
+.portfolio-item  span a.visit-website{
+    color: var(--primary_color);
 }
 
 .portfolio-items .portfolio-item.portfolio-full .portfolio-item-inner {
