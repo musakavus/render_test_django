@@ -8,13 +8,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # burası git işleminde açılacak
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
-# ALLOWED_HOSTS = []
-# DEBUG = True
-# SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
+ALLOWED_HOSTS = []
+DEBUG = True
+SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -58,14 +58,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'render_test.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(
+        'postgres://render_test_django_user:CrLCVsSJb7y08sTQSjOVwLxi5qkV6XAV@dpg-ckvc703amefc73f5rvf0-a.frankfurt-postgres.render.com/render_test_django')
+
 }
 
 database_url = os.environ.get('DATABASE_URL')
-DATABASES["default"] = dj_database_url.parse(database_url)
+#
 
 AUTH_PASSWORD_VALIDATORS = [
     {
