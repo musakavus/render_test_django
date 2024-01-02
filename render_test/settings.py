@@ -16,8 +16,6 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 # DEBUG = True
 # SECRET_KEY = 'django-insecure-hxe@e^h8-(x7iij$w#wy6cliu5#r70kz#fm+8_79y9r-6=^-%s'
 
-
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,7 +64,6 @@ DATABASES = {
     }
 }
 
-
 database_url = os.environ.get('DATABASE_URL')
 
 DATABASES["default"] = dj_database_url.parse(database_url)
@@ -97,11 +94,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# BURASI DÜZENLEMEDE AÇILACAK
-
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/'),
 )
+
+# STATIC_ROOT = (BASE_DIR / 'staficfiles/')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
