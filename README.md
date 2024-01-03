@@ -28,3 +28,16 @@ To set up the project in your local environment, follow the steps below:
     - Open the `settings.py` file located in the project directory.
     - Find the section related to environment variables.
     - Update the values of the environment variables according to your configuration.
+
+6. Adjust the database configuration in the `settings.py` file to fit your needs:
+
+    - Open the `settings.py` file.
+    - Locate the `DATABASES` section.
+    - Modify the database settings
+
+## About the Author
+
+This project is maintained by Musa Kavus. If you have any questions, suggestions, or just want to say hello, you
+can reach me at [musakavus@gmail.com](mailto:musakavus@gmail.com). Your feedback is highly appreciated!
+
+Happy coding!
