@@ -10,15 +10,15 @@ from django.contrib import staticfiles
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+# DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 
 # it will be active when working local
-# ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
-# DEBUG = env.bool('DEBUG', default=False)
-# SECRET_KEY = env('SECRET_KEY')
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+DEBUG = env.bool('DEBUG', default=False)
+SECRET_KEY = env('SECRET_KEY')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
