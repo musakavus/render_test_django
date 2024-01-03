@@ -59,11 +59,19 @@ TEMPLATES = [
 WSGI_APPLICATION = 'render_test.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('DATABASE_URL')
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'render_test_django',
+#         'USER': 'render_test_django_user',
+#         'PASSWORD': 'CrLCVsSJb7y08sTQSjOVwLxi5qkV6XAV',  # PostgreSQL şifrenizi buraya ekleyin
+#         'HOST': 'dpg-ckvc703amefc73f5rvf0-a',  # PostgreSQL sunucu adresiniz
+#         'PORT': '5432',
+#     }
+# }
 
 
 # database_url = os.environ.get('DATABASE_URL')
