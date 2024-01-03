@@ -6,7 +6,6 @@ from django.contrib import staticfiles
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
@@ -57,18 +56,6 @@ database_url = os.environ.get('DATABASE_URL')
 DATABASES = {
     'default': dj_database_url.parse(database_url)
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'render_test_django',
-#         'USER': 'render_test_django_user',
-#         'PASSWORD': 'CrLCVsSJb7y08sTQSjOVwLxi5qkV6XAV',  # PostgreSQL şifrenizi buraya ekleyin
-#         'HOST': 'dpg-ckvc703amefc73f5rvf0-a',  # PostgreSQL sunucu adresiniz
-#         'PORT': '5432',
-#     }
-# }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
