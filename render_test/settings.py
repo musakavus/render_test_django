@@ -15,6 +15,7 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 # it will be active when working local
+
 # ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 # DEBUG = env.bool('DEBUG', default=False)
 # SECRET_KEY = env('SECRET_KEY')

@@ -865,6 +865,10 @@ main.drake-main {
     font-weight: 300;
 }
 
+a.visit-github {
+    color: var(--primary_color);
+}
+
 .hero-section .hero-content h1 span {
     color: var(--primary_color);
 }

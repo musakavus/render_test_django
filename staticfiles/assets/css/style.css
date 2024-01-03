@@ -868,6 +868,10 @@ main.drake-main {
     margin-right: 15px;
 }
 
+a.visit-github {
+    color: var(--primary_color);
+}
+
 .hero-section .hero-content .go-to-project-btn img {
     display: block;
     animation: rotating 6s infinite linear;
@@ -1174,7 +1178,7 @@ body .body-overlay {
 }
 
 
-.portfolio-item  span a.visit-website{
+.portfolio-item span a.visit-website {
     color: var(--primary_color);
 }
 
