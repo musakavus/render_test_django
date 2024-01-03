@@ -13,7 +13,6 @@ def home(request):
             form.save()
 
     else:
-        logging.error('Form validation failed in home view.')
         form = ContactForm()
 
     return render(request, 'home1.html', {'form': form})
