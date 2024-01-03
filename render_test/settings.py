@@ -14,7 +14,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
-
 # it will be active when working local
 # ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 # DEBUG = env.bool('DEBUG', default=False)
@@ -27,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main.apps.MainConfig'
+    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +60,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'render_test.wsgi.application'
-
 
 DATABASES = {
     'default': dj_database_url.parse(env('DATABASE_URL'))

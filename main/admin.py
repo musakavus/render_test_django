@@ -7,7 +7,8 @@ from main.models import ContactMessageModel
 
 
 class ContactMessageAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('full_name', 'email', 'phone_number', 'subject', 'message')
+    search_fields = ('full_name', 'email', 'subject')
 
 
 admin.site.register(ContactMessageModel, ContactMessageAdmin)
