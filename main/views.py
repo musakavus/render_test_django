@@ -1,3 +1,5 @@
+import logging
+
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
@@ -9,10 +11,9 @@ def home(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message was sent successfully.')
-            return redirect('home')
 
     else:
+        logging.error('Form validation failed in home view.')
         form = ContactForm()
 
     return render(request, 'home1.html', {'form': form})

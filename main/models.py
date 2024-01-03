@@ -12,6 +12,10 @@ class ContactMessageModel(models.Model):
     ]
     subject = models.CharField(max_length=20, choices=SUBJECT_CHOICES)
     message = models.TextField()
+    send_at = models.DateTimeField(auto_now_add=True)
+
+    def formatted_send_at(self):
+        return self.send_at.strftime('%d %b %Y %H:%M')  # Türkçe tarih formatı
 
     def __str__(self):
         return self.full_name
