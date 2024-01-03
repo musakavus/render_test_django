@@ -23,16 +23,8 @@ To set up the project in your local environment, follow the steps below:
     ```bash
     python manage.py migrate
     ```
+5. Configure the environment variables in your `settings.py` file:
 
-## Usage
-
-Once the project is set up, you can access the website via [local address](https://www.musakavus.dev/). Refer to
-the [user guide](docs/user-guide.md) for more information about the project.
-
-## Contributing
-
-If you want to contribute to this project, please check the [Contributing Guide](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [license type] - see the [LICENSE.md](LICENSE.md) file for details.
+    - Open the `settings.py` file located in the project directory.
+    - Find the section related to environment variables.
+    - Update the values of the environment variables according to your configuration.
